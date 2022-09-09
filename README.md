@@ -3,33 +3,35 @@
 > It's a simple react-native component made to help you to create your awesome custom scroll indicators. It's support only ScrollView for now. But in the next version it should support FlatList.
 
 ## Usage
-1. Install the package <br />
-    `npm i react-native-scroll-indicator`<br />
-    or<br />
-    `yarn add react-native-scroll-indicator`<br />
 
+1. Install the package <br />
+   `npm i -S podcloud/react-native-scroll-indicator`<br />
+   or<br />
+   `yarn add podcloud/react-native-scroll-indicator`<br />
 
 2. Add an import to the top of your file
-    ```javascript
-    import ScrollViewIndicator from 'react-native-scroll-indicator';
-    ```
+   ```javascript
+   import ScrollViewIndicator from "react-native-scroll-indicator";
+   ```
 3. Use it just as normal ScrollView but with some custom props.
-    ```javascript
-    <ScrollViewIndicator>
-        <Content />
-    </ScrollViewIndicator>
-    ```
-    
+   ```javascript
+   <ScrollViewIndicator>
+     <Content />
+   </ScrollViewIndicator>
+   ```
+
 ## Component Props
 
-| Props                | Type              | Description                                                                                                                                                                                     | Default |
-|----------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| flexibleIndicator               | bool             | Set to `false` if you want to set your indicator a fixed height | true      |
-| indicatorHeight              | num               | Height of indicator. Use with `flexibleIndicator`                                                                                                                                                                       | 200       |
-| shouldIndicatorHide               | bool   | Set to `true` if you want to hide Indicator when scroll is idle | true
-| hideTimeout | num | Time of show/hide indicator animation in `ms`   | 500    |
-| style     | style            | Style of container | {} |
-| scrollViewStyle     | style            | Style of ScrollView component | {} |
-| scrollIndicatorContainerStyle     | style            | Style of scroll indicator container | {} |
-| scrollIndicatorStyle     | style            | Style on scroll indicator | {} |
-| ...ScrollViewProps     | ScrollViewProps            | All other props will be passed to ScrollView | {} |
+| Props                         | Type            | Description                                                     | Default |
+| ----------------------------- | --------------- | --------------------------------------------------------------- | ------- |
+| flexibleIndicator             | bool            | Set to `false` if you want to set your indicator a fixed height | true    |
+| indicatorHeight               | num             | Height of indicator. Use with `flexibleIndicator`               | 200     |
+| shouldIndicatorHide           | bool            | Set to `true` if you want to hide Indicator when scroll is idle | true    |
+| hideTimeout                   | num             | Time of show/hide indicator animation in `ms`                   | 500     |
+| showDuration                  | num             | Duration before hiding indicator in `ms`                        | 1200    |
+| useTimer                      | bool            | Use timer based detection for scroll show/hide animation        | false   |
+| style                         | style           | Style of container                                              | {}      |
+| scrollViewStyle               | style           | Style of ScrollView component                                   | {}      |
+| scrollIndicatorContainerStyle | style           | Style of scroll indicator container                             | {}      |
+| scrollIndicatorStyle          | style           | Style on scroll indicator                                       | {}      |
+| ...ScrollViewProps            | ScrollViewProps | All other props will be passed to ScrollView                    | {}      |

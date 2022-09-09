@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { ScrollView, View, StyleSheet, Animated } from 'react-native';
 
@@ -8,6 +8,8 @@ export default ({
     flexibleIndicator = true,
     shouldIndicatorHide = true,
     hideTimeout = 500,
+    useTimer = false,
+    showDuration = 1200,
     style = {},
     scrollViewStyle = {},
     scrollIndicatorContainerStyle = {},
@@ -33,6 +35,8 @@ export default ({
         setScrollIndicatorContainerHeight,
     ] = useState(1);
 
+    const timer = useRef();
+
     const handleScroll = (value) => {
         const {nativeEvent: { contentOffset }} = value;
         /**
@@ -52,6 +56,11 @@ export default ({
                 100) *
             movePercent;
         setFromTop(position);
+        if(useTimer) {
+            showIndicator();
+            clearTimeout(timer.current);
+            setTimeout(runHideTimer, showDuration)
+        }
     };
 
     useEffect(() => {

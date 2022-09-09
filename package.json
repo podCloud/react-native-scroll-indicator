@@ -1,6 +1,6 @@
 {
   "name": "react-native-scroll-indicator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "This package will help you to create your awesome custom scroll indicator",
   "main": "index.js",
@@ -34,10 +34,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mishabelokon/react-native-scroll-indicator.git"
+    "url": "git+https://github.com/podcloud/react-native-scroll-indicator.git"
   },
   "bugs": {
-    "url": "https://github.com/mishabelokon/react-native-scroll-indicator/issues"
+    "url": "https://github.com/podcloud/react-native-scroll-indicator/issues"
   },
-  "homepage": "https://github.com/mishabelokon/react-native-scroll-indicator#readme"
+  "homepage": "https://github.com/podcloud/react-native-scroll-indicator#readme"
 }
